@@ -8,4 +8,4 @@ Modalidad de cursada: Presencial
 Nombre y apellido: Valentina Francesca Vacca
 Instancia de evaluación: Segundo Parcial
 Docente: Florencia Magalí Bilotti
-link:
+link: https://valenvacca007.github.io/pixarworld/

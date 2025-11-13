@@ -108,10 +108,10 @@
     const seccionPastillas = document.querySelector('.pastillas-section');
     const boton = document.querySelector('.btn-ver-mas-movil');
 
-    // alternar la clase "mostrar-todo" que activa el CSS
+    
     seccionPastillas.classList.toggle('mostrar-todo');
 
-    // cambiar texto del botón según el estado
+   
     if (seccionPastillas.classList.contains('mostrar-todo')) {
       boton.textContent = "Ver menos";
     } else {
@@ -125,7 +125,7 @@
 
   </div>
 </section>
-
+<!-- Carousel EXITOS PELIS (Bootstrap) -->
 <div id="carouselPeliculas" class="carousel slide" data-bs-ride="carousel">
   <div id="carouselPeliculas" class="carousel slide responsive-carousel" data-bs-ride="carousel">
 
@@ -182,13 +182,13 @@
   </div>
 
 </section>
-
+<!-- NOTA -->
 <section id="nota" class="nota-principal">
   <h2>Pixar: La magia que cambió la animación</h2>
 
   <div class="nota-contenido">
 
-    <!-- Bloques visibles siempre -->
+   
     <div class="bloque-texto-imagen">
       <div class="texto">
         <p>Pixar comenzó como un grupo de estudiantes y profesionales de animación y computación, apasionados por la idea de crear películas por computadora. En los primeros años, fracasaron en varios intentos, experimentando con cortometrajes y tecnologías que no siempre funcionaban.</p>
@@ -212,7 +212,7 @@
       </div>
     </div>
 
-    <!-- Bloques que se ocultan en móvil hasta tocar “Ver más” -->
+   
     <div class="extra-contenido" id="nota-extra">
       <div class="bloque-texto-imagen">
         <div class="texto">
@@ -247,7 +247,7 @@
     </div>
   </div>
 
-  <!-- Este botón es SOLO para celular -->
+  <!--  botón para celular -->
   <button id="verMasBtn" class="btn-ver-mas-nota">Ver más</button>
 </section>
 
@@ -357,7 +357,6 @@
 
 
 <!-- FORMULARIO--> 
-<!-- ✅ SECCIÓN FORMULARIO FUNCIONAL  -->
 <section id="contacto" class="form-section py-5">
   <div class="container">
     <div class="row justify-content-center">
