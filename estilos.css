@@ -892,3 +892,44 @@ button:hover {
     display: none !important;
   }
 }
+.video-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 50px 0;
+}
+
+.video-section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #8b1e3f; /* tono Gin Heredero Rosa */
+}
+
+.video-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-gif {
+  max-width: 500px;      /* tamaño máximo */
+  width: 90%;            /* para que se adapte a pantallas chicas */
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.video-gif:hover {
+  transform: scale(1.03);
+  filter: brightness(1.1);
+}
+
+.video-section p {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #555;
+}
