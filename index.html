@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentina Francesca Vacca - DMM2BP - Comisión - Maquetado y desarrollo web - 2025</title>
+
+  <!-- CSS de Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- JS de Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- CSS propio -->
+  <link rel="stylesheet" href="estilos.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Barra de navegación (Bootstrap) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">PixarWorld</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#banner">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pastillas">Peliculas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#nota">Informacion</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sabias">¿Sabias que?</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Formulario</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Carousel (Bootstrap) -->
+
+  <section id="banner" class="mt-5 pt-4">
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="imagenes/PIXAR2019DISNEY_.webp" class="d-block w-100" alt="Banner 1">
+      </div>
+      <div class="carousel-item">
+        <img src="imagenes/pixar2.webp" class="d-block w-100" alt="Banner 2">
+      </div>
+      <div class="carousel-item">
+        <img src="imagenes/pixar3.jpg" class="d-block w-100" alt="Banner 3">
+      </div>
+    </div>
+
+</section>
+
+
+  <!-- Pastillas -->
+
+<section class="pastillas-section">
+  <h2>Exitos de Pixar</h2>
+
+  <div class="pastillas-container">
+    <div class="pastilla">
+      <img src="imagenes/toystorycard.webp" alt="Toy Story">
+      <h3>Toy Story (1995)</h3>
+      <p>Woody y Buzz Lightyear viven aventuras mientras intentan volver con su dueño Andy.</p>
+      <a class="btn-ver-mas">Ver más</a>
+    </div>
+
+    <div class="pastilla">
+      <img src="imagenes/nemocards.jpg" alt="Coco">
+    <h3>Buscando a Nemo (2003)</h3>
+      <p>Marlin atraviesa el océano para rescatar a su hijo Nemo con la ayuda de Dory.</p>
+      <a class="btn-ver-mas">Ver más</a>
+    </div>
+
+    <div class="pastilla">
+      <img src="imagenes/ratatuille.jpg" alt="Frozen">
+        <h3>Ratatouille (2007)</h3>
+      <p>Remy, una rata gourmet, sueña con ser chef y demostrar que cualquiera puede cocinar.</p>
+      <a class="btn-ver-mas">Ver más</a>
+    </div>
+
+    <div class="pastilla ocultar-movil">
+      <img src="imagenes/carscard.jpg" alt="Up">
+       <h3>Cars (2006)</h3>
+       <p>Rayo McQueen aprende lecciones de amistad y humildad mientras corre hacia la fama.</p>
+      <a class="btn-ver-mas">Ver más</a>
+    </div>
+
+    <div class="pastilla ocultar-movil">
+      <img src="imagenes/losincreiblescard.jpg" alt="Ratatouille">
+     <h3>Los Increíbles (2004)</h3>
+      <p>Una familia de superhéroes debe ocultar sus poderes hasta que surge una gran amenaza.</p>
+      <a class="btn-ver-mas">Ver más</a>
+    </div>
+
+    <div class="pastilla ocultar-movil">
+      <img src="imagenes/intensamentecard.jpg" alt="Moana">
+      <h3>Intensamente (2015)</h3>
+       <p>Las emociones de Riley intentan guiarla en su nueva vida tras mudarse a otra ciudad.</p>
+      <a class="btn-ver-mas">Ver más</a>
+      
+    </div>
+  </div>
+<script>
+  function mostrarMasPastillas() {
+    const seccionPastillas = document.querySelector('.pastillas-section');
+    const boton = document.querySelector('.btn-ver-mas-movil');
+
+    // alternar la clase "mostrar-todo" que activa el CSS
+    seccionPastillas.classList.toggle('mostrar-todo');
+
+    // cambiar texto del botón según el estado
+    if (seccionPastillas.classList.contains('mostrar-todo')) {
+      boton.textContent = "Ver menos";
+    } else {
+      boton.textContent = "Ver más películas";
+    }
+  }
+</script>
+
+  <button class="btn-ver-mas-movil" onclick="mostrarMasPastillas()">Ver más películas</button>
+</section>
+
+  </div>
+</section>
+
+<div id="carouselPeliculas" class="carousel slide" data-bs-ride="carousel">
+  <div id="carouselPeliculas" class="carousel slide responsive-carousel" data-bs-ride="carousel">
+
+  <div class="carousel-inner">
+ 
+    <!-- Primer slide -->
+    <div class="carousel-item active">
+      <div class="row text-center">
+        <div class="col-md-2">
+          <img src="imagenes/bichos.jpg" class="img-fluid rounded" alt="Peli 1">
+        </div>
+        <div class="col-md-2">
+          <img src="imagenes/COCO.jpg" class="img-fluid rounded" alt="Peli 2">
+        </div>
+        <div class="col-md-2">
+          <img src="imagenes/monster-uni.png" class="img-fluid rounded" alt="Peli 3">
+        </div>
+        <div class="col-md-2">
+          <img src="imagenes/monster.jpg" class="img-fluid rounded" alt="Peli 4">
+        </div>
+        <div class="col-md-2">
+          <img src="imagenes/DORY.png" class="img-fluid rounded" alt="Peli 5">
+        </div>
+        <div class="col-md-2">
+          <img src="imagenes/SOUL.png" class="img-fluid rounded" alt="Peli 6">
+        </div>
+      </div>
+    </div>
+
+    <!-- Segundo slide -->
+    <div class="carousel-item">
+      <div class="row text-center">
+        <div class="col-md-2">
+          <img src="imagenes/up.jpg" class="img-fluid rounded" alt="Peli 7">
+        </div>
+        <div class="col-md-2">
+          <img src="imagenes/walle.jpg" class="img-fluid rounded" alt="Peli 8">
+        </div>
+        <div class="col-md-2">
+          <img src="imagenes/TOY4.jpg" class="img-fluid rounded" alt="Peli 9">
+        </div>
+        <div class="col-md-2">
+          <img src="imagenes/INCRE2.png" class="img-fluid rounded" alt="Peli 10">
+        </div>
+        <div class="col-md-2">
+          <img src="imagenes/RED.webp" class="img-fluid rounded" alt="Peli 11">
+        </div>
+        <div class="col-md-2">
+          <img src="imagenes/LUCA.jpg" class="img-fluid rounded" alt="Peli 12">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="nota" class="nota-principal">
+  <h2>Pixar: La magia que cambió la animación</h2>
+
+  <div class="nota-contenido">
+
+    <!-- Bloques visibles siempre -->
+    <div class="bloque-texto-imagen">
+      <div class="texto">
+        <p>Pixar comenzó como un grupo de estudiantes y profesionales de animación y computación, apasionados por la idea de crear películas por computadora. En los primeros años, fracasaron en varios intentos, experimentando con cortometrajes y tecnologías que no siempre funcionaban.</p>
+        <p>En un momento crucial, Steve Jobs se interesó en su proyecto y decidió invertir en la compañía, comprando la división de gráficos por computadora de Lucasfilm en 1986 y fundando oficialmente Pixar como empresa independiente.</p>
+        <p>Finalmente, en 1995, Pixar estrenó Toy Story, la primera película de animación completamente por computadora. Fue un éxito rotundo, tanto artístico como comercial, y marcó el comienzo de una era de oro en la animación digital. A partir de ahí, Pixar siguió creando películas innovadoras, llenas de corazón, humor y creatividad, consolidándose como uno de los estudios de animación más importantes del mundo.</p>
+        <p>Durante los siguientes 15 años, el equipo trabajó intensamente, perfeccionando su tecnología y desarrollando historias únicas, pero el éxito comercial aún era esquivo. Crearon cortometrajes y comerciales que llamaron la atención del público y de la industria, ganando premios y reconocimiento, pero todavía no habían lanzado su primer largometraje.</p>
+      </div>
+      <div class="imagen">
+        <img src="imagenes/pixar3.jpeg" alt="Toy Story escena">
+      </div>
+    </div>
+
+    <div class="bloque-texto-imagen reverse">
+      <div class="texto">
+        <p>Finalmente, en 1995, Pixar estrenó Toy Story, la primera película de animación completamente por computadora. Fue un éxito rotundo, tanto artístico como comercial, y marcó el comienzo de una era de oro en la animación digital.</p>
+        <p>A partir de ahí, Pixar siguió creando películas innovadoras, llenas de corazón, humor y creatividad, consolidándose como uno de los estudios de animación más importantes del mundo.</p>
+        <p>Su creatividad no se limita a la historia: el diseño visual, la música y los efectos sonoros trabajan juntos para crear experiencias inmersivas.</p>
+      </div>
+      <div class="imagen">
+        <img src="imagenes/toystory2.jpg" alt="Toy Story detrás de escena">
+      </div>
+    </div>
+
+    <!-- Bloques que se ocultan en móvil hasta tocar “Ver más” -->
+    <div class="extra-contenido" id="nota-extra">
+      <div class="bloque-texto-imagen">
+        <div class="texto">
+          <p>Cuando Steve Jobs compró la compañía en 1986, el equipo estaba buscando un nombre que sonara moderno y tecnológico, relacionado con imágenes y animación por computadora.</p>
+          <p>La palabra “Pix” viene de “pixels”, que son los pequeños puntos que forman las imágenes digitales. El sufijo “-ar” fue agregado para que sonara más como un verbo inventado en inglés, dando la sensación de acción o movimiento.</p>
+          <p>Así nació Pixar, un nombre corto, memorable y tecnológico que refleja su enfoque en animación digital.</p>
+        </div>
+        <div class="imagen">
+          <img src="imagenes/PIXAR2019DISNEY_.webp" alt="Logo Pixar">
+        </div>
+      </div>
+
+      <div class="bloque-texto-imagen reverse">
+        <div class="texto">
+          <p>Pixar ha logrado consolidarse como uno de los estudios de animación más exitosos gracias a películas que marcaron época. Comenzando con <strong>Toy Story</strong> (1995), demostró que podía crear historias entrañables con personajes memorables como Woody y Buzz.</p>
+          <p>Luego llegaron <strong>Bichos</strong> (1998) y <strong>Buscando a Nemo</strong> (2003), seguidas por <strong>Los Increíbles</strong> (2004), una historia de superhéroes llena de humor y valores familiares.</p>
+        </div>
+        <div class="imagen">
+          <img src="imagenes/equipo2.png" alt="Equipo Pixar">
+        </div>
+      </div>
+
+      <div class="bloque-texto-imagen">
+        <div class="texto">
+          <p>Películas como <strong>Ratatouille</strong> (2007) y <strong>WALL·E</strong> (2008) mostraron la capacidad de Pixar de contar historias profundas. <strong>Up</strong> (2009) ofreció una de las aperturas más emotivas del cine, mientras que <strong>Coco</strong> (2017) celebró la familia y la música mexicana.</p>
+          <p>Cada uno de estos éxitos demuestra la habilidad de Pixar para combinar creatividad, tecnología y emoción, dejando una huella imborrable en la historia del cine.</p>
+        </div>
+        <div class="imagen">
+          <img src="imagenes/rata.png" alt="Ratatouille arte">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Este botón es SOLO para celular -->
+  <button id="verMasBtn" class="btn-ver-mas-nota">Ver más</button>
+</section>
+
+
+<section id="sabias" class="sabias-section">
+  <h2>¿Sabías que...?</h2>
+
+  
+  <div class="sabias-container">
+
+    <div class="sabias-card">
+      <div class="frente"> Toy Story</div>
+      <div class="dorso">Fue la primera película animada completamente por computadora en la historia (1995).</div>
+    </div>
+
+    <div class="sabias-card">
+      <div class="frente">WALL·E</div>
+      <div class="dorso">Solo tiene 169 palabras habladas, el resto se comunica con sonidos y gestos.</div>
+    </div>
+
+    <div class="sabias-card">
+      <div class="frente"> Coco</div>
+      <div class="dorso">Cada flor de cempasúchil fue animada individualmente. Se usaron más de 7 millones en total.</div>
+    </div>
+
+    <div class="sabias-card">
+      <div class="frente"> Up</div>
+      <div class="dorso">Para levantar la casa realmente, se necesitarían más de 20 millones de globos de helio.</div>
+    </div>
+
+    <div class="sabias-card">
+      <div class="frente"> Buscando a Nemo</div>
+      <div class="dorso">Los animadores estudiaron biología marina y pasaron meses observando peces reales.</div>
+    </div>
+
+    <div class="sabias-card">
+      <div class="frente"> Intensamente</div>
+      <div class="dorso">Cada emoción tiene su propia textura: Alegría brilla, Tristeza es opaca y Miedo es filoso.</div>
+    </div>
+
+    <div class="sabias-card">
+      <div class="frente"> Ratatouille</div>
+      <div class="dorso">El equipo fue entrenado por chefs franceses reales para animar las escenas de cocina con precisión.</div>
+    </div>
+
+    <div class="sabias-card">
+      <div class="frente"> Cars</div>
+      <div class="dorso">Cada auto tiene reflejos animados manualmente para que parezcan reales en movimiento.</div>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="video" class="py-5 bg-black text-center">
+    <div class="container">
+      <h2 class="mb-4 text-uppercase fw-bold">Tráiler Oficial</h2>
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/ylT1cG9gmHw" title="The Sandman Netflix Trailer" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+<!-- muestra  --> 
+
+<section id="muestra-info" class="muestra-info py-5">
+  <div class="contenido">
+    <h2>Muestra Toy Story hasta diciembre</h2>
+    <p>Ven a disfrutar de la exhibición de Toy Story con escenas, figuras y material exclusivo de la saga. ¡No te lo pierdas!</p>
+    
+    <div class="cards">
+      <div class="card">
+        <img src="imagenes/toystorye.jpg" alt="Toy Story 1">
+        <div class="info">
+          <h3>Toy Story</h3>
+          <p>La historia que comenzó todo, con Woody y Buzz Lightyear.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="imagenes/toystoryee.jpg" alt="Toy Story 2">
+        <div class="info">
+          <h3>Toy Story 2</h3>
+          <p>Los juguetes viven nuevas aventuras y descubren lealtad y amistad.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="imagenes/muestra2.jpg" alt="Toy Story 3">
+        <div class="info">
+          <h3>Toy Story 3</h3>
+          <p>Un emotivo adiós y nuevas historias por vivir.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="imagenes/muestra.jpg" alt="Toy Story 4">
+        <div class="info">
+          <h3>Toy Story 4</h3>
+          <p>Woody y Forky emprenden nuevas aventuras y descubrimientos.</p>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<!-- FORMULARIO--> 
+<!-- ✅ SECCIÓN FORMULARIO FUNCIONAL  -->
+<section id="contacto" class="form-section py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+
+      <div class="col-lg-8">
+        <h2 class="text-center mb-4">Contacto</h2>
+        <p class="text-center">Completá el formulario para comunicarte</p>
+
+        <!-- ✅ FORMULARIO FORMPSPREE (CAMBIAR CODIGO) -->
+        <form action="https://formspree.io/f/manayvjk" method="POST" class="p-4 rounded shadow bg-white">
+          
+          <div class="row g-3">
+            
+            <!-- ✅ Columna izquierda -->
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Nombre completo</label>
+                <input type="text" name="nombre" class="form-control" required>
+              </div>
+
+              <div class="form-group">
+                <label>Correo electrónico</label>
+                <input type="email" name="email" class="form-control" required>
+              </div>
+
+              <div class="form-group">
+                <label>Teléfono</label>
+                <input type="text" name="telefono" class="form-control">
+              </div>
+            </div>
+
+            <!-- ✅ Columna derecha -->
+            <div class="col-md-6">
+              <div class="form-group h-100">
+                <label>Mensaje</label>
+                <textarea name="mensaje" rows="7" class="form-control" required></textarea>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-center">
+              <button type="submit" class="btn btn-warning px-4 mt-3">Enviar</button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+<footer class="bg-dark text-white text-center p-4 mt-5">
+  <p>Valentina Francesca Vacca - Maquetado y desarrollo Web - Diseño Multimedial - Turno Mañana - Comisión 2A - 2025</p>
+<div class="footer-icons">
+  <a href="https://www.instagram.com" target="_blank">
+    <img src="imagenes/instagramm.png" alt="Instagram">
+  </a>
+
+  <a href="https://www.facebook.com" target="_blank">
+    <img src="imagenes/facebook.png" alt="Facebook">
+  </a>
+
+  <a href="https://www.twitter.com" target="_blank">
+    <img src="imagenes/outube.png" alt="Twitter">
+  </a>
+
+    
+  </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("verMasBtn");
+  const extra = document.getElementById("nota-extra");
+
+  if (btn && extra) {
+    btn.addEventListener("click", () => {
+      extra.classList.toggle("mostrar");
+      btn.textContent = extra.classList.contains("mostrar") ? "Ver menos" : "Ver más";
+    });
+  }
+});
+</script>

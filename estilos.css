@@ -1,0 +1,894 @@
+/* ===================== GLOBAL ===================== */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Poppins:wght@400;600&display=swap');
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: 0;
+}
+
+/* ===================== NAVBAR ===================== */
+.navbar {
+  min-height: 80px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.navbar .navbar-brand {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.navbar .nav-link {
+  font-size: 1.1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.custom-navbar {
+  background-color: #ff6b81;
+}
+
+.custom-navbar .nav-link {
+  color: white;
+  font-weight: bold;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #ffd6e0;
+}
+
+.custom-navbar .navbar-brand {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* ===================== BANNER ===================== */
+#banner .carousel-inner {
+  height: 100vh;
+}
+/* === BANNER === */
+#banner .carousel-inner {
+  height: 100vh; /* pantalla completa en PC */
+}
+
+#banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 🔥 recorta proporcionalmente sin deformar */
+}
+
+/* En celular: el banner se adapta al contenido real */
+@media (max-width: 768px) {
+  #banner .carousel-inner {
+    height: auto;
+  }
+
+  #banner img {
+    height: auto;
+    object-fit: contain; /* mantiene proporciones */
+  }
+}
+
+
+/* ===================== PASTILLAS ===================== */
+.pastillas-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.pastillas-section h2 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 40px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* === GRID === */
+.pastillas-container {
+  display: grid;
+  gap: 30px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* 💻 Escritorio grande: 6 en fila */
+@media (min-width: 1100px) {
+  .pastillas-container {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* 🖥️ Laptop: 3 por fila */
+@media (min-width: 769px) and (max-width: 1099px) {
+  .pastillas-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 📱 Celular: 3 visibles + botón */
+@media (max-width: 768px) {
+  .pastillas-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Ocultar las tres de abajo */
+  .ocultar-movil {
+    display: none;
+  }
+
+  /* Mostrar las ocultas cuando se hace click */
+  .pastillas-section.mostrar-todo .ocultar-movil {
+    display: block;
+  }
+
+  .btn-ver-mas-movil {
+    display: inline-block;
+  }
+}
+
+/* 🚫 En escritorio ocultamos el botón global */
+@media (min-width: 769px) {
+  .btn-ver-mas-movil {
+    display: none !important;
+  }
+}
+
+/* === TARJETA INDIVIDUAL === */
+.pastilla {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  padding: 20px;
+}
+
+.pastilla:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.pastilla img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.pastilla h3 {
+  font-size: 1.1rem;
+  color: #222;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.pastilla p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+/* === CONTENEDOR DEL BOTÓN INDIVIDUAL === */
+.boton-container {
+  background-color: #f7f7f7;
+  border-radius: 12px;
+  padding: 10px 0;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.boton-container:hover {
+  background-color: #ffe4e9;
+}
+
+/* === BOTÓN INDIVIDUAL “VER MÁS” === */
+.btn-ver-mas {
+  display: inline-block;
+  background-color: #fff;
+  border: 2px solid #4c1fff;
+  color: #ff6b81;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 10px 18px;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.btn-ver-mas:hover {
+  background-color: #ffffff;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+
+/* === BOTÓN GLOBAL (solo celular) === */
+.btn-ver-mas-container {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.btn-ver-mas-movil {
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #ff3b2f, #ff6b81);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.btn-ver-mas-movil:hover {
+  background: linear-gradient(90deg, #ff6b81, #ff3b2f);
+  transform: scale(1.05);
+}
+
+/* ===================== CARRUSEL PELÍCULAS ===================== */
+.responsive-carousel .carousel-inner {
+  padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+  #carouselPeliculas .carousel-inner {
+    display: block !important;
+  }
+
+  #carouselPeliculas .carousel-item {
+    display: block !important;
+    margin-bottom: 15px;
+  }
+
+  #carouselPeliculas .carousel-item .row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    justify-items: center;
+  }
+
+  #carouselPeliculas img {
+    width: 100px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  #carouselPeliculas img:hover {
+    transform: scale(1.05);
+  }
+
+  #carouselPeliculas .carousel-control-prev,
+  #carouselPeliculas .carousel-control-next {
+    display: none !important;
+  }
+}
+
+/* ===================== NOTA PRINCIPAL ===================== */
+.nota-principal {
+  position: relative;
+  padding: 60px 20px;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #1e3c72 0%, #2a5298 50%, #4a90e2 100%);
+}
+
+.nota-principal h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  color: #ffffff;
+}
+
+.bloque-texto-imagen {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 50px;
+  gap: 20px;
+  transition: transform 0.3s;
+}
+
+.bloque-texto-imagen.reverse {
+  flex-direction: row-reverse;
+}
+
+.bloque-texto-imagen .texto {
+  flex: 1;
+  min-width: 200px;
+  color: #ffffff;
+}
+
+.bloque-texto-imagen .imagen {
+  flex: 1;
+  text-align: center;
+}
+
+.bloque-texto-imagen .imagen img {
+  width: 100%;
+  max-width: 650px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgb(255, 255, 255);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.bloque-texto-imagen .imagen img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+  .bloque-texto-imagen,
+  .bloque-texto-imagen.reverse {
+    flex-direction: column;
+  }
+}
+
+/* Ver más en Nota */
+.extra-contenido {
+  display: block;
+}
+
+.extra-contenido.oculto {
+  display: none;
+}
+
+#verMasBtn {
+  display: none;
+  margin: 20px auto 0;
+  background-color: #ff6b81;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#verMasBtn:hover {
+  background-color: #ff3b2f;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .extra-contenido {
+    display: none;
+  }
+
+  .extra-contenido.mostrar {
+    display: block;
+  }
+
+  #verMasBtn {
+    display: block;
+  }
+}
+/* ===================== ¿SABÍAS QUÉ? ===================== */
+.sabias-section {
+  background: linear-gradient(180deg, #fdf4ea 0%, #ffe3d8 100%);
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.sabias-section h2 {
+  font-size: 2.5rem;
+  color: #ff6b81;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 6px rgba(255, 107, 129, 0.2);
+}
+
+/* Contenedor general */
+.sabias-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* ==== Carta giratoria ==== */
+.sabias-card {
+  position: relative;
+  width: 260px;
+  height: 200px;
+  perspective: 1000px; /* profundidad para el giro */
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+/* Caras de la carta */
+.sabias-card .frente,
+.sabias-card .dorso {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.8s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Cara frontal */
+.sabias-card .frente {
+  background: linear-gradient(135deg, #ff6b81, #ff3b2f);
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Cara trasera */
+.sabias-card .dorso {
+  background-color: #fff;
+  color: #444;
+  transform: rotateY(180deg);
+  font-size: 0.95rem;
+  line-height: 1.4;
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Efecto hover */
+.sabias-card:hover .frente {
+  transform: rotateY(180deg);
+}
+
+.sabias-card:hover .dorso {
+  transform: rotateY(360deg);
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 768px) {
+  .sabias-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sabias-card {
+    width: 90%;
+    max-width: 320px;
+    height: 180px;
+  }
+
+  .sabias-card .frente {
+    font-size: 1.1rem;
+  }
+
+  .sabias-card .dorso {
+    font-size: 0.9rem;
+  }
+}
+
+/* ===================== MUESTRA ===================== */
+.muestra-info {
+  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0,0,0,0.5)),
+              url('imagenes/toystoryy.jpg') center/cover no-repeat;
+  padding: 60px 20px;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+.muestra-info h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #ffd700;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+.muestra-info .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.muestra-info .card {
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  width: 220px;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.muestra-info .card:hover {
+  transform: translateY(-8px) scale(1.07);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+}
+
+@media (max-width: 768px) {
+  .muestra-info .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    justify-items: center;
+  }
+
+  .muestra-info .card {
+    width: 100%;
+    max-width: 160px;
+  }
+}
+/* === Fix de color de texto en las cards de la sección muestra === */
+.muestra-info .card,
+.muestra-info .card * {
+  color: #fff !important; /* fuerza blanco en todos los textos internos */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* mejora contraste sobre el fondo */
+}
+
+.muestra-info .card h3,
+.muestra-info .card p {
+  color: #fff !important;
+}
+
+.muestra-info .card a {
+  color: #ffd700 !important; /* opcional: enlaces en dorado, a juego con el título */
+  font-weight: 600;
+}
+
+.muestra-info .card a:hover {
+  color: #fff !important;
+  text-decoration: underline;
+}
+
+
+
+/* ===================== FORMULARIO ===================== */
+.form-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.form-video-wrapper {
+  position: relative;
+  width: 600px;
+  height: 700px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  padding: 40px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-form h2 {
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 1rem;
+  outline: none;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  background-color: #ffcc00;
+  color: #222;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #ffd633;
+  transform: scale(1.05);
+}
+
+/* ===================== FOOTER ICONS ===================== */
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.footer-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.footer-icons a img {
+  width: 90%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.footer-icons a:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.3);
+}
+/* ====== PASTILLAS · FIX DEFINITIVO (pegar al FINAL del CSS) ====== */
+
+/* Contenedor de pastillas con GRID */
+.pastillas-container {
+  display: grid !important;
+  grid-template-columns: repeat(6, 1fr); /* 6 en escritorio */
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 12px;
+}
+
+/* Tarjeta sin anchos fijos */
+.pastilla {
+  width: 100% !important;
+  max-width: none !important;
+  box-sizing: border-box;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+/* Imagen dentro de la tarjeta */
+.pastilla img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Contenedor bonito para el botón individual */
+.boton-container {
+  background-color: #f3f4f6;
+  border-radius: 10px;
+  padding: 10px 0;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+.boton-container:hover { background-color: #ffe7ea; }
+
+.btn-ver-mas {
+  display: inline-block;
+  color: #0a66ff;
+  font-weight: 600;
+  text-decoration: none;
+}
+.btn-ver-mas:hover { color: #ff3b2f; text-decoration: underline; }
+
+/* Botón global (solo móvil) */
+.btn-ver-mas-container { text-align: center; margin-top: 20px; }
+.btn-ver-mas-movil {
+  padding: 10px 20px;
+  background: linear-gradient(90deg,#ff3b2f,#ff6b81);
+  color: #fff; border: 0; border-radius: 10px;
+  font-weight: 700; box-shadow: 0 4px 10px rgba(0,0,0,.2);
+}
+
+/* ====== RESPONSIVE ====== */
+
+/* Celular: 3 por fila; ocultar las extras hasta “Ver más películas” */
+@media (max-width: 768px) {
+  .pastillas-container { grid-template-columns: repeat(3, 1fr) !important; }
+
+  /* ocultar las tres de abajo por defecto */
+  .ocultar-movil { display: none !important; }
+  /* mostrarlas cuando la sección tenga la clase .mostrar-todo */
+  .pastillas-section.mostrar-todo .ocultar-movil { display: block !important; }
+
+  .btn-ver-mas-movil { display: inline-block !important; }
+}
+
+/* Escritorio: mostrar todas y ocultar el botón global */
+@media (min-width: 769px) {
+  .ocultar-movil { display: block !important; }
+  .btn-ver-mas-movil { display: none !important; }
+}
+/* === SECCIÓN DE PASTILLAS === */
+.pastillas-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.pastillas-section h2 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 40px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* === GRID === */
+.pastillas-container {
+  display: grid;
+  gap: 25px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* === Tarjeta individual === */
+.pastilla {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  padding: 15px;
+}
+
+.pastilla:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.pastilla img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.pastilla h3 {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.pastilla p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+/* === Contenedor del botón individual === */
+.boton-container {
+  background-color: #f3f4f6;
+  border-radius: 10px;
+  padding: 8px 0;
+  transition: background-color 0.3s ease;
+}
+.boton-container:hover {
+  background-color: #ffe3e3;
+}
+
+/* === Botón individual “Ver más” === */
+.btn-ver-mas {
+  display: inline-block;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.btn-ver-mas:hover {
+  color: #ff3b2f;
+  text-decoration: underline;
+}
+
+/* === BOTÓN GLOBAL (solo celular) === */
+.btn-ver-mas-container {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.btn-ver-mas-movil {
+  padding: 10px 20px;
+  background: linear-gradient(90deg,#ff3b2f,#ff6b81);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.btn-ver-mas-movil:hover {
+  background: linear-gradient(90deg,#ff6b81,#ff3b2f);
+  transform: scale(1.05);
+}
+
+/* === RESPONSIVE GRID === */
+
+/* 💻 Escritorio grande: 6 en fila */
+@media (min-width: 1100px) {
+  .pastillas-container {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* 🖥️ Laptop: 3 por fila */
+@media (min-width: 769px) and (max-width: 1099px) {
+  .pastillas-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 📱 Celular: 3 visibles + botón */
+@media (max-width: 768px) {
+  .pastillas-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .pastilla {
+    padding: 8px;
+  }
+
+  .pastilla h3 {
+    font-size: 0.85rem;
+  }
+
+  .pastilla p {
+    display: none;
+  }
+
+  /* Ocultar las de abajo */
+  .ocultar-movil {
+    display: none;
+  }
+
+  /* Mostrar al tocar el botón */
+  .pastillas-section.mostrar-todo .ocultar-movil {
+    display: block;
+  }
+
+  .btn-ver-mas-movil {
+    display: inline-block;
+  }
+}
+
+/* 🚫 En escritorio ocultamos el botón global */
+@media (min-width: 769px) {
+  .btn-ver-mas-movil {
+    display: none !important;
+  }
+}
