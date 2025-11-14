@@ -41,13 +41,38 @@
   <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
+        <picture>
+         <source
+            media="(max-width: 480px)" srcset="imagenes/PIXARcelujpg.jpg">
+          <source
+            media="(max-width: 768px)" srcset="imagenes/PIXARtablet.jpg">
+          <source
+            media="(min-width: 769px)" srcset="imagenes/PIXARcompujpg.jpg">
         <img src="imagenes/PIXAR2019DISNEY_.webp" class="d-block w-100" alt="Banner 1">
+</picture>
       </div>
+
       <div class="carousel-item">
+        <picture>
+        <source
+            media="(max-width: 480px)" srcset="imagenes/bannercelu.jpg">
+          <source
+            media="(max-width: 768px)" srcset="imagenes/bannertablet.jpg">
+          <source
+            media="(min-width: 769px)" srcset="imagenes/bannergrande.jpg">
         <img src="imagenes/pixar2.webp" class="d-block w-100" alt="Banner 2">
+        </picture>
       </div>
       <div class="carousel-item">
+        <picture>
+          <source
+            media="(max-width: 480px)" srcset="imagenes/PIXARcelujpg.jpg">
+          <source
+            media="(max-width: 768px)" srcset="imagenes/PIXARtablet.jpg">
+          <source
+            media="(min-width: 769px)" srcset="imagenes/PIXARcompujpg.jpg">
         <img src="imagenes/pixar3.jpg" class="d-block w-100" alt="Banner 3">
+        </picture>
       </div>
     </div>
 
@@ -61,64 +86,97 @@
 
   <div class="pastillas-container">
     <div class="pastilla">
+      <picture>
+        <source
+            media="(max-width: 480px)" srcset="imagenes/toystorycard.jpg">
+          <source
+            media="(max-width: 768px)" srcset="imagenes/toystorycard2.jpg">
+          <source
+            media="(min-width: 769px)" srcset="imagenes/toystorycard.webp">
       <img src="imagenes/toystorycard.webp" alt="Toy Story">
+      </picture>
       <h3>Toy Story (1995)</h3>
       <p>Woody y Buzz Lightyear viven aventuras mientras intentan volver con su dueño Andy.</p>
       <a class="btn-ver-mas">Ver más</a>
     </div>
 
     <div class="pastilla">
-      <img src="imagenes/nemocards.jpg" alt="Coco">
+      <picture>
+        <source
+            media="(max-width: 480px)" srcset="imagenes/nemocardstablet.jpg">
+          <source
+            media="(max-width: 768px)" srcset="imagenes/nemocardstablet.jpg">
+          <source
+            media="(min-width: 769px)" srcset="imagenes/nemocardscompu.jpg">
+       <img src="imagenes/nemocards.jpg" alt="Coco">
+      </picture>
     <h3>Buscando a Nemo (2003)</h3>
       <p>Marlin atraviesa el océano para rescatar a su hijo Nemo con la ayuda de Dory.</p>
       <a class="btn-ver-mas">Ver más</a>
     </div>
 
     <div class="pastilla">
-      <img src="imagenes/ratatuille.jpg" alt="Frozen">
+       <picture>
+        <source
+            media="(max-width: 480px)" srcset="imagenes/ratatuillecelu.jpg">
+          <source
+            media="(max-width: 768px)" srcset="imagenes/ratatuilletablet.jpg">
+          <source
+            media="(min-width: 769px)" srcset="imagenes/ratatuillecompu.jpg">
+      <img src="imagenes/ratatuille.jpg" alt="ratatuille">
+       </picture>
         <h3>Ratatouille (2007)</h3>
       <p>Remy, una rata gourmet, sueña con ser chef y demostrar que cualquiera puede cocinar.</p>
       <a class="btn-ver-mas">Ver más</a>
     </div>
 
     <div class="pastilla ocultar-movil">
+       <picture>
+        <source
+            media="(max-width: 480px)" srcset="imagenes/carscardelu.jpg">
+          <source
+            media="(max-width: 768px)" srcset="imagenes/carscardtablet.jpg">
+          <source
+            media="(min-width: 769px)" srcset="imagenes/carscardcompu.jpg">
       <img src="imagenes/carscard.jpg" alt="Up">
+       </picture>
        <h3>Cars (2006)</h3>
        <p>Rayo McQueen aprende lecciones de amistad y humildad mientras corre hacia la fama.</p>
       <a class="btn-ver-mas">Ver más</a>
     </div>
 
     <div class="pastilla ocultar-movil">
-      <img src="imagenes/losincreiblescard.jpg" alt="Ratatouille">
+       <picture>
+        <source
+            media="(max-width: 480px)" srcset="imagenes/losincreiblescardcelu.jpg">
+          <source
+            media="(max-width: 768px)" srcset="imagenes/losincreiblescardtablet.jpg">
+          <source
+            media="(min-width: 769px)" srcset="imagenes/losincreiblescardcompu.jpg">
+      <img src="imagenes/losincreiblescard.jpg" alt="increibles">
+       </picture>
      <h3>Los Increíbles (2004)</h3>
       <p>Una familia de superhéroes debe ocultar sus poderes hasta que surge una gran amenaza.</p>
       <a class="btn-ver-mas">Ver más</a>
     </div>
 
     <div class="pastilla ocultar-movil">
+      <picture>
+      <source
+            media="(max-width: 480px)" srcset="imagenes/intensamentecard3.jpg">
+          <source
+            media="(max-width: 768px)" srcset="imagenes/intensamentecard2.jpg">
+          <source
+            media="(min-width: 769px)" srcset="imagenes/intensamentecard1.jpg">
       <img src="imagenes/intensamentecard.jpg" alt="Moana">
+      </picture>
       <h3>Intensamente (2015)</h3>
        <p>Las emociones de Riley intentan guiarla en su nueva vida tras mudarse a otra ciudad.</p>
       <a class="btn-ver-mas">Ver más</a>
       
     </div>
   </div>
-<script>
-  function mostrarMasPastillas() {
-    const seccionPastillas = document.querySelector('.pastillas-section');
-    const boton = document.querySelector('.btn-ver-mas-movil');
 
-    
-    seccionPastillas.classList.toggle('mostrar-todo');
-
-   
-    if (seccionPastillas.classList.contains('mostrar-todo')) {
-      boton.textContent = "Ver menos";
-    } else {
-      boton.textContent = "Ver más películas";
-    }
-  }
-</script>
 
   <button class="btn-ver-mas-movil" onclick="mostrarMasPastillas()">Ver más películas</button>
 </section>
@@ -135,22 +193,78 @@
     <div class="carousel-item active">
       <div class="row text-center">
         <div class="col-md-2">
+      <picture>
+        <source
+            media="(max-width: 480px)" srcset="imagenes/losincreiblescardcelu.jpg"> 
+          <source
+            media="(max-width: 768px)" srcset="imagenes/losincreiblescardtablet.jpg">
+          <source
+            media="(min-width: 769px)" srcset="imagenes/losincreiblescardcompu.jpg">
           <img src="imagenes/bichos.jpg" class="img-fluid rounded" alt="Peli 1">
         </div>
+
         <div class="col-md-2">
+           <picture>
+        <source
+            media="(max-width: 480px)" srcset="imagenes/coco-480.webp"> 
+          <source
+            media="(max-width: 768px)" srcset="imagenes/coco-768.webp">
+          <source
+            media="(min-width: 769px)" srcset="imagenes/coco-1200.webp">
           <img src="imagenes/COCO.jpg" class="img-fluid rounded" alt="Peli 2">
+           </picture>
         </div>
+
+
         <div class="col-md-2">
+          <picture>
+        <source
+            media="(max-width: 480px)" srcset="imagenes/monsters_uni-480.webp"> 
+          <source
+            media="(max-width: 768px)" srcset="imagenes/monsters_uni-768.webp">
+          <source
+            media="(min-width: 769px)" srcset="imagenes/monsters_uni-1200.webp">
           <img src="imagenes/monster-uni.png" class="img-fluid rounded" alt="Peli 3">
+          </picture>
         </div>
+
+
         <div class="col-md-2">
+           <picture>
+        <source
+            media="(max-width: 480px)" srcset="imagenes/monsters_inc-480.webp"> 
+          <source
+            media="(max-width: 768px)" srcset="imagenes/monsters_inc-768.webp">
+          <source
+            media="(min-width: 769px)" srcset="imagenes/monsters_inc-1200.webp">
           <img src="imagenes/monster.jpg" class="img-fluid rounded" alt="Peli 4">
+           </picture>
         </div>
+
+
         <div class="col-md-2">
+          <picture>
+        <source
+            media="(max-width: 480px)" srcset="imagenes/dory-480.webp"> 
+          <source
+            media="(max-width: 768px)" srcset="imagenes/dory-768.webp">
+          <source
+            media="(min-width: 769px)" srcset="imagenes/dory-1200.webp">
           <img src="imagenes/DORY.png" class="img-fluid rounded" alt="Peli 5">
+          </picture>
         </div>
+
+
         <div class="col-md-2">
+          <picture>
+        <source
+            media="(max-width: 480px)" srcset="imagenes/soul-480.webp">
+          <source
+            media="(max-width: 768px)" srcset="imagenes/soul-768.webp">
+          <source
+            media="(min-width: 769px)" srcset="imagenes/soul-1200.webp">
           <img src="imagenes/SOUL.png" class="img-fluid rounded" alt="Peli 6">
+        </picture>
         </div>
       </div>
     </div>
@@ -159,22 +273,75 @@
     <div class="carousel-item">
       <div class="row text-center">
         <div class="col-md-2">
+          <picture>
+        <source
+            media="(max-width: 480px)" srcset="imagenes/up-480.webp">
+          <source
+            media="(max-width: 768px)" srcset="imagenes/up-768.webp">
+          <source
+            media="(min-width: 769px)" srcset="imagenes/up-1200.webp">
           <img src="imagenes/up.jpg" class="img-fluid rounded" alt="Peli 7">
+          </picture>
         </div>
+        
         <div class="col-md-2">
+           <picture>
+        <source
+            media="(max-width: 480px)" srcset="imagenes/walle-480.webp">
+          <source
+            media="(max-width: 768px)" srcset="imagenes/walle-768.webp">
+          <source
+            media="(min-width: 769px)" srcset="imagenes/walle-1200.webp">
           <img src="imagenes/walle.jpg" class="img-fluid rounded" alt="Peli 8">
+           </picture>
         </div>
+        
         <div class="col-md-2">
+          <picture>
+        <source
+            media="(max-width: 480px)" srcset="imagenes/toy4-480.webp">
+          <source
+            media="(max-width: 768px)" srcset="imagenes/toy4-768.webp">
+          <source
+            media="(min-width: 769px)" srcset="imagenes/toy4-1200.webp">
           <img src="imagenes/TOY4.jpg" class="img-fluid rounded" alt="Peli 9">
+          </picture>
         </div>
+        
         <div class="col-md-2">
-          <img src="imagenes/INCRE2.png" class="img-fluid rounded" alt="Peli 10">
-        </div>
+          <picture>
+        <source
+            media="(max-width: 480px)" srcset="imagenes/incre2-480.webp">
+          <source
+            media="(max-width: 768px)" srcset="imagenes/incre2-768.webp">
+          <source
+            media="(min-width: 769px)" srcset="imagenes/incre2-1200.webp">
+            <img src="imagenes/INCRE2.png" class="img-fluid rounded" alt="Peli 10">
+          </picture>
+          </div>
+        
         <div class="col-md-2">
+        <picture>
+        <source
+            media="(max-width: 480px)" srcset="imagenes/red-480.webp">
+          <source
+            media="(max-width: 768px)" srcset="imagenes/red-768.webp">
+          <source
+            media="(min-width: 769px)" srcset="imagenes/red-1200.webp">
           <img src="imagenes/RED.webp" class="img-fluid rounded" alt="Peli 11">
+        </picture>
         </div>
+        
         <div class="col-md-2">
+          <picture>
+        <source
+            media="(max-width: 480px)" srcset="imagenes/luca-480.webp">
+          <source
+            media="(max-width: 768px)" srcset="imagenes/luca-768.webp">
+          <source
+            media="(min-width: 769px)" srcset="imagenes/luca-1200.webp">
           <img src="imagenes/LUCA.jpg" class="img-fluid rounded" alt="Peli 12">
+          </picture>
         </div>
       </div>
     </div>
@@ -197,8 +364,16 @@
         <p>Durante los siguientes 15 años, el equipo trabajó intensamente, perfeccionando su tecnología y desarrollando historias únicas, pero el éxito comercial aún era esquivo. Crearon cortometrajes y comerciales que llamaron la atención del público y de la industria, ganando premios y reconocimiento, pero todavía no habían lanzado su primer largometraje.</p>
       </div>
       <div class="imagen">
-        <img src="imagenes/pixar3.jpeg" alt="Toy Story escena">
-      </div>
+         <picture>
+        <source
+            media="(max-width: 480px)" srcset="imagenes/pixar3-480.webp">
+          <source
+            media="(max-width: 768px)" srcset="imagenes/pixar3-768.webp">
+          <source
+            media="(min-width: 769px)" srcset="imagenes/pixar3-1200.webp">
+            <img src="imagenes/pixar3.jpeg" alt="Toy Story escena">
+         </picture>
+          </div>
     </div>
 
     <div class="bloque-texto-imagen reverse">
@@ -208,7 +383,15 @@
         <p>Su creatividad no se limita a la historia: el diseño visual, la música y los efectos sonoros trabajan juntos para crear experiencias inmersivas.</p>
       </div>
       <div class="imagen">
+        <picture>
+        <source
+            media="(max-width: 480px)" srcset="imagenes/woody_dev-480.webp">
+          <source
+            media="(max-width: 768px)" srcset="imagenes/woody_dev-768.webp">
+          <source
+            media="(min-width: 769px)" srcset="imagenes/woody_dev-1200.webp">
         <img src="imagenes/toystory2.jpg" alt="Toy Story detrás de escena">
+       </picture>
       </div>
     </div>
 
@@ -221,7 +404,15 @@
           <p>Así nació Pixar, un nombre corto, memorable y tecnológico que refleja su enfoque en animación digital.</p>
         </div>
         <div class="imagen">
+          <picture>
+        <source
+            media="(max-width: 480px)" srcset="imagenes/pixar_logo-480.webp">
+          <source
+            media="(max-width: 768px)" srcset="imagenes/pixar_logo-768.webp">
+          <source
+            media="(min-width: 769px)" srcset="imagenes/pixar_logo-1200.webp">
           <img src="imagenes/PIXAR2019DISNEY_.webp" alt="Logo Pixar">
+          </picture>
         </div>
       </div>
 
@@ -231,7 +422,15 @@
           <p>Luego llegaron <strong>Bichos</strong> (1998) y <strong>Buscando a Nemo</strong> (2003), seguidas por <strong>Los Increíbles</strong> (2004), una historia de superhéroes llena de humor y valores familiares.</p>
         </div>
         <div class="imagen">
+         <picture>
+        <source
+            media="(max-width: 480px)" srcset="imagenes/equipo-480.webp">
+          <source
+            media="(max-width: 768px)" srcset="imagenes/equipo-768.webp">
+          <source
+            media="(min-width: 769px)" srcset="imagenes/equipo-1200.webp">
           <img src="imagenes/equipo2.png" alt="Equipo Pixar">
+         </picture>
         </div>
       </div>
 
@@ -241,7 +440,15 @@
           <p>Cada uno de estos éxitos demuestra la habilidad de Pixar para combinar creatividad, tecnología y emoción, dejando una huella imborrable en la historia del cine.</p>
         </div>
         <div class="imagen">
+          <picture>
+        <source
+            media="(max-width: 480px)" srcset="imagenes/rata-480.webp">
+          <source
+            media="(max-width: 768px)" srcset="imagenes/rata-768.webp">
+          <source
+            media="(min-width: 769px)" srcset="imagenes/rata-1200.webp">
           <img src="imagenes/rata.png" alt="Ratatouille arte">
+          </picture>
         </div>
       </div>
     </div>
@@ -322,7 +529,15 @@
     
     <div class="cards">
       <div class="card">
+        <picture>
+        <source
+            media="(max-width: 480px)" srcset="imagenes/buzz_salon-480.webp">
+          <source
+            media="(max-width: 768px)" srcset="imagenes/buzz_salon-768.webp">
+          <source
+            media="(min-width: 769px)" srcset="imagenes/buzz_salon-1200.webp">
         <img src="imagenes/toystorye.jpg" alt="Toy Story 1">
+        </picture>
         <div class="info">
           <h3>Toy Story</h3>
           <p>La historia que comenzó todo, con Woody y Buzz Lightyear.</p>
@@ -330,7 +545,15 @@
       </div>
 
       <div class="card">
+        <picture>
+        <source
+            media="(max-width: 480px)" srcset="imagenes/woody_salon-480.webp">
+          <source
+            media="(max-width: 768px)" srcset="imagenes/woody_salon-768.webp">
+          <source
+            media="(min-width: 769px)" srcset="imagenes/woody_salon-1200.webp">
         <img src="imagenes/toystoryee.jpg" alt="Toy Story 2">
+        </picture>
         <div class="info">
           <h3>Toy Story 2</h3>
           <p>Los juguetes viven nuevas aventuras y descubren lealtad y amistad.</p>
@@ -338,7 +561,15 @@
       </div>
 
       <div class="card">
+        <picture>
+        <source
+            media="(max-width: 480px)" srcset="imagenes/zurg-480.webp">
+          <source
+            media="(max-width: 768px)" srcset="imagenes/zurg-768.webp">
+          <source
+            media="(min-width: 769px)" srcset="imagenes/zurg-1200.webp">
         <img src="imagenes/muestra2.jpg" alt="Toy Story 3">
+        </picture>
         <div class="info">
           <h3>Toy Story 3</h3>
           <p>Un emotivo adiós y nuevas historias por vivir.</p>
@@ -346,7 +577,15 @@
       </div>
 
       <div class="card">
+        <picture>
+        <source
+            media="(max-width: 480px)" srcset="imagenes/expo30-480.webp">
+          <source
+            media="(max-width: 768px)" srcset="imagenes/expo30-768.webp">
+          <source
+            media="(min-width: 769px)" srcset="imagenes/expo30-1200.webp">
         <img src="imagenes/muestra.jpg" alt="Toy Story 4">
+        </picture>
         <div class="info">
           <h3>Toy Story 4</h3>
           <p>Woody y Forky emprenden nuevas aventuras y descubrimientos.</p>
@@ -357,55 +596,63 @@
 
 
 <!-- FORMULARIO--> 
-<section id="contacto" class="form-section py-5">
-  <div class="container">
-    <div class="row justify-content-center">
 
-      <div class="col-lg-8">
-        <h2 class="text-center mb-4">Contacto</h2>
-        <p class="text-center">Completá el formulario para comunicarte</p>
 
-        <form action="https://formspree.io/f/manayvjk" method="POST" class="p-4 rounded shadow bg-white">
-          
-          <div class="row g-3">
-            
-          
-            <div class="col-md-6">
-              <div class="form-group">
-                <label>Nombre completo</label>
-                <input type="text" name="nombre" class="form-control" required>
-              </div>
+<section class="form-section">
+  <div class="form-video-wrapper">
 
-              <div class="form-group">
-                <label>Correo electrónico</label>
-                <input type="email" name="email" class="form-control" required>
-              </div>
+    <form id="formulario" class="contact-form" novalidate>
 
-              <div class="form-group">
-                <label>Teléfono</label>
-                <input type="text" name="telefono" class="form-control">
-              </div>
-            </div>
+      <h2>Contacto</h2>
 
-          
-            <div class="col-md-6">
-              <div class="form-group h-100">
-                <label>Mensaje</label>
-                <textarea name="mensaje" rows="7" class="form-control" required></textarea>
-              </div>
-            </div>
+      <div class="form-grid">
 
-            <div class="d-flex justify-content-center">
-              <button type="submit" class="btn btn-warning px-4 mt-3">Enviar</button>
-            </div>
+        
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" class="form-control" required>
+          <small class="invalid-feedback">Ingresá tu nombre.</small>
+        </div>
 
-          </div>
-        </form>
+       
+        <div class="form-group">
+          <label for="apellido">Apellido</label>
+          <input type="text" id="apellido" class="form-control" required>
+          <small class="invalid-feedback">Ingresá tu apellido.</small>
+        </div>
+
+        
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" class="form-control" required>
+          <small class="invalid-feedback">Ingresá un correo válido.</small>
+        </div>
+
+       
+        <div class="form-group">
+          <label for="telefono">Teléfono</label>
+          <input type="text" id="telefono" class="form-control" required>
+          <small class="invalid-feedback">Ingresá un teléfono válido.</small>
+        </div>
+
       </div>
 
-    </div>
+      
+      <div class="form-group full-row">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" rows="4" class="form-control" required></textarea>
+        <small class="invalid-feedback">Escribí un mensaje.</small>
+      </div>
+
+      <button type="submit">Enviar</button>
+
+    </form>
+
   </div>
 </section>
+
+<!-- footer -->
+
 <footer class="bg-dark text-white text-center p-4 mt-5">
   <p>Valentina Francesca Vacca - Maquetado y desarrollo Web - Diseño Multimedial - Turno Mañana - DMM2BP - 2025</p>
 <div class="footer-icons">
@@ -424,7 +671,22 @@
     
   </div>
 </footer>
+<script>
+  function mostrarMasPastillas() {
+    const seccionPastillas = document.querySelector('.pastillas-section');
+    const boton = document.querySelector('.btn-ver-mas-movil');
 
+    
+    seccionPastillas.classList.toggle('mostrar-todo');
+
+   
+    if (seccionPastillas.classList.contains('mostrar-todo')) {
+      boton.textContent = "Ver menos";
+    } else {
+      boton.textContent = "Ver más películas";
+    }
+  }
+</script>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("verMasBtn");
@@ -437,4 +699,46 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+</script>
+<script>
+  const form = document.getElementById('formulario');
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    let valido = true;
+    const campos = form.querySelectorAll('.form-control');
+
+    campos.forEach(campo => {
+      const error = campo.parentElement.querySelector('.invalid-feedback');
+      
+      if (!campo.value.trim()) {
+        campo.classList.add('is-invalid');
+        campo.classList.remove('is-valid');
+        error.style.display = "block";
+        valido = false;
+      } else {
+        campo.classList.remove('is-invalid');
+        campo.classList.add('is-valid');
+        error.style.display = "none";
+      }
+    });
+
+    if (valido) {
+      alert("Formulario enviado correctamente ✨");
+      form.reset();
+      campos.forEach(c => c.classList.remove('is-valid'));
+    }
+  });
+
+  document.querySelectorAll('.form-control').forEach(campo => {
+    campo.addEventListener('input', () => {
+      const error = campo.parentElement.querySelector('.invalid-feedback');
+      if (campo.value.trim()) {
+        campo.classList.remove('is-invalid');
+        campo.classList.add('is-valid');
+        error.style.display = "none";
+      }
+    });
+  });
 </script>

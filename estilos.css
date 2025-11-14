@@ -489,81 +489,6 @@ img {
 }
 
 
-/* ===================== FORMULARIO ===================== */
-.form-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.form-video-wrapper {
-  position: relative;
-  width: 600px;
-  height: 700px;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.contact-form {
-  position: relative;
-  background-color: rgba(255, 255, 255, 0.85);
-  border-radius: 20px;
-  padding: 40px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.contact-form h2 {
-  text-align: center;
-  color: #333;
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.form-group {
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.form-group label {
-  font-weight: 600;
-  margin-bottom: 6px;
-}
-
-.form-group input,
-.form-group textarea {
-  border: none;
-  border-radius: 10px;
-  padding: 12px;
-  font-size: 1rem;
-  outline: none;
-  background-color: #fff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-button {
-  background-color: #ffcc00;
-  color: #222;
-  border: none;
-  border-radius: 10px;
-  padding: 12px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 10px;
-}
-
-button:hover {
-  background-color: #ffd633;
-  transform: scale(1.05);
-}
-
 /* ===================== FOOTER ICONS ===================== */
 .footer-icons {
   display: flex;
@@ -750,7 +675,7 @@ button:hover {
   text-decoration: underline;
 }
 
-/* === BOTÓN GLOBAL (solo celular) === */
+/* === BOTÓN (solo celular) === */
 .btn-ver-mas-container {
   text-align: center;
   margin-top: 25px;
@@ -867,3 +792,164 @@ button:hover {
   font-size: 1rem;
   color: #555;
 }
+/* ==== SECCIÓN PRINCIPAL ==== */
+.form-section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  background: linear-gradient(180deg, #1d68e1 0%, #5fa8ff 100%);
+}
+
+
+
+/* ==== FORMULARIO ==== */
+.contact-form {
+  position: relative;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(5px);
+  border-radius: 25px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* TÍTULO PIXAR */
+.contact-form h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  color: #1d68e1;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.full-row {
+  grid-column: span 2;
+}
+
+/* ==== CAMPOS ==== */
+.form-group label {
+  font-weight: 700;
+  color: #1d68e1;
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 1rem;
+  outline: none;
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+}
+
+
+.form-group input:hover,
+.form-group textarea:hover {
+  transform: scale(1.02);
+}
+
+/* ==== VALIDACIÓN ==== */
+.form-control.is-invalid {
+  border: 2px solid #ff3b3b !important;
+  background-color: #ffe6e6;
+}
+
+.form-control.is-valid {
+  border: 2px solid #28a745 !important;
+  background-color: #e8ffe8;
+}
+
+.invalid-feedback {
+  color: #ff3b3b;
+  font-size: 0.8rem;
+  margin-top: 4px;
+  display: none;
+}
+
+/* ==== BOTÓN PIXAR ==== */
+button {
+  background-color: #f7c000;
+  color: #222;
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  margin-top: 15px;
+  font-size: 1.2rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  background-color: #ffd633;
+  transform: translateY(-3px) scale(1.05);
+}
+
+.form-section {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.form-section {
+  min-height: 100vh;
+  height: auto;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .form-video-wrapper {
+    width: 90%;
+    min-height: auto;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .full-row {
+    grid-column: span 1;
+  }
+}
+
+.form-section {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #1d68e1; 
+}
+
+footer {
+  margin-top: 0 !important;
+}
+
